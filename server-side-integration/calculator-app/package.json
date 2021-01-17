@@ -1,6 +1,7 @@
 {
   "name": "calculator",
   "version": "0.1.0",
+  "homepage": "./",
   "devDependencies": {
     "chai": "^4.2.0",
     "prettier": "^1.17.1",

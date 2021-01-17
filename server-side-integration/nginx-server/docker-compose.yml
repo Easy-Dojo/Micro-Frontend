@@ -1,0 +1,10 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:1.13-alpine
+    container_name: nginx
+    ports:
+      - 3000:3000
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d/
+      - ./html/:/usr/share/nginx/html

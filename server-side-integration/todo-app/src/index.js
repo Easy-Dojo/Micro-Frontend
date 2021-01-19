@@ -15,7 +15,7 @@ store.dispatch(fetchTodos())
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename="/todo">
         <App />
       </Router>
     </Provider>

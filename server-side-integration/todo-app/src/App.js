@@ -11,20 +11,20 @@ function App() {
           <h1>Redux Fundamentals Example</h1>
           <ul>
             <li>
-              <Link to="/todo/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/todo/hello">Hello</Link>
+              <Link to="/hello">Hello</Link>
             </li>
           </ul>
         </section>
       </nav>
       <main>
         <Switch>
-          <Route path="/todo/hello">
+          <Route path="/hello">
             <HelloPage />
           </Route>
-          <Route path="/todo/" exact >
+          <Route path="/" exact >
             <TodoPage />
           </Route>
         </Switch>

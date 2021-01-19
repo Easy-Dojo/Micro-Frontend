@@ -1,8 +1,7 @@
 import React from 'react'
-
-import Header from './features/header/Header'
-import TodoList from './features/todos/TodoList'
-import Footer from './features/footer/Footer'
+import TodoPage from './pages/TodoPage'
+import { Switch, Route, Link } from 'react-router-dom'
+import HelloPage from './pages/HelloPage'
 
 function App() {
   return (
@@ -10,17 +9,25 @@ function App() {
       <nav>
         <section>
           <h1>Redux Fundamentals Example</h1>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/hello">Hello</Link>
+            </li>
+          </ul>
         </section>
       </nav>
       <main>
-        <section className="medium-container">
-          <h2>Todos</h2>
-          <div className="todoapp">
-            <Header />
-            <TodoList />
-            <Footer />
-          </div>
-        </section>
+        <Switch>
+          <Route path="/hello">
+            <HelloPage />
+          </Route>
+          <Route path="/" exact >
+            <TodoPage />
+          </Route>
+        </Switch>
       </main>
     </div>
   )

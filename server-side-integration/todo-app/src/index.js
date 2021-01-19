@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './App'
+import { BrowserRouter as Router } from "react-router-dom";
 
 import './api/server'
 
@@ -14,7 +15,9 @@ store.dispatch(fetchTodos())
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
